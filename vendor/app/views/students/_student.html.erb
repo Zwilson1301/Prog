@@ -1,0 +1,35 @@
+<div id="<%= dom_id student %>">
+  <p>
+    <strong>First name:</strong>
+    <%= student.first_name %>
+  </p>
+
+  <p>
+    <strong>Last name:</strong>
+    <%= student.last_name %>
+  </p>
+
+  <p>
+    <strong>Offset from roy:</strong>
+    <%= student.offset_from_roy %>
+  </p>
+
+  <p>
+    <strong>In syria:</strong>
+    <%= student.in_syria %>
+  </p>
+
+  <p>
+    <strong>Dr e watching:</strong>
+    <%= student.dr_e_watching %>
+  </p>
+
+  <% if student.profile_picture.present? %>
+<<<<<<< HEAD
+    <%= image_tag(student.profile_picture, :class =>"img-thumbnail") %>
+=======
+    <%= image_tag(student.profile_picture, :class => "img-thumbnail") %>
+>>>>>>> 0ac397ac3d73707f2070eb03fab2cbea96634170
+  <% end %>
+
+</div>

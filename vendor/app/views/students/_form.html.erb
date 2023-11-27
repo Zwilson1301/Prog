@@ -1,0 +1,30 @@
+<%= simple_form_for student do |form| %>
+
+  <%= form.input :first_name %>
+
+  <%= form.input :profile_picture %>
+
+  <div>
+    <%= form.label :last_name, style: "display: block" %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div>
+    <%= form.label :offset_from_roy, style: "display: block" %>
+    <%= form.number_field :offset_from_roy %>
+  </div>
+
+  <div>
+    <%= form.label :in_syria, style: "display: block" %>
+    <%= form.check_box :in_syria %>
+  </div>
+
+  <div>
+    <%= form.label :dr_e_watching, style: "display: block" %>
+    <%= form.check_box :dr_e_watching %>
+  </div>
+
+  <div>
+    <%= form.submit :class => "btn btn-primary" %>
+  </div>
+<% end %>
