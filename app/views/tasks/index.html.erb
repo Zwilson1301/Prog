@@ -1,0 +1,32 @@
+<h1>Tasks for <%= @project.name %></h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Due Date</th>
+      <th>Completion</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.name %></td>
+        <td><%= task.description %></td>
+        <td><%= task.due_date %></td>
+        <td><%= task.completion ? 'Completed' : 'Pending' %></td>
+        <td>
+          <%= link_to 'Show', project_task_path(@project, task), class: 'btn btn-primary btn-sm' %>
+          <%= link_to 'Edit', edit_project_task_path(@project, task), class: 'btn btn-secondary btn-sm' %>
+          <%= link_to 'Delete', project_task_path(@project, task), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Task', new_project_task_path(@project), class: 'btn btn-success' %>
+<%= link_to 'Back', projects_path, class: 'btn btn-primary' %>
+
