@@ -20,7 +20,7 @@
         <td>
           <%= link_to 'Show', project_task_path(@project, task), class: 'btn btn-primary btn-sm' %>
           <%= link_to 'Edit', edit_project_task_path(@project, task), class: 'btn btn-secondary btn-sm' %>
-          <%= link_to 'Delete', project_task_path(@project, task), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
+          <%= button_to 'Delete', project_task_path(@project, task), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
         </td>
       </tr>
     <% end %>
