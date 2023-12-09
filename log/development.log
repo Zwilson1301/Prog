@@ -39777,3 +39777,224 @@ Processing by DashboardController#index as HTML
 Completed 200 OK in 1009ms (Views: 852.0ms | ActiveRecord: 94.0ms | Allocations: 12242)
 
 
+Started GET "/" for 192.168.56.1 at 2023-12-09 20:35:15 +0000
+Cannot render console from 192.168.56.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mProject Load (10.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/dashboard/index.html.erb:11
+  [1m[36mTask Count (3.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."completion" = ?[0m  [["project_id", 1], ["completion", 1]]
+  ↳ app/views/dashboard/index.html.erb:15
+  [1m[36mTask Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 1]]
+  ↳ app/views/dashboard/index.html.erb:15
+  [1m[36mTask Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ? AND (due_date < '2023-12-09') AND "tasks"."completion" = ?[0m  [["project_id", 1], ["completion", 0]]
+  ↳ app/views/dashboard/index.html.erb:16
+  [1m[36mTask Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."completion" = ?[0m  [["project_id", 2], ["completion", 1]]
+  ↳ app/views/dashboard/index.html.erb:15
+  [1m[36mTask Count (3.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/views/dashboard/index.html.erb:15
+  [1m[36mTask Count (3.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ? AND (due_date < '2023-12-09') AND "tasks"."completion" = ?[0m  [["project_id", 2], ["completion", 0]]
+  ↳ app/views/dashboard/index.html.erb:16
+  [1m[36mTask Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."completion" = ?[0m  [["project_id", 3], ["completion", 1]]
+  ↳ app/views/dashboard/index.html.erb:15
+  [1m[36mTask Count (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 3]]
+  ↳ app/views/dashboard/index.html.erb:15
+  [1m[36mTask Count (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ? AND (due_date < '2023-12-09') AND "tasks"."completion" = ?[0m  [["project_id", 3], ["completion", 0]]
+  ↳ app/views/dashboard/index.html.erb:16
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 700.6ms | Allocations: 9749)
+  Rendered shared/_navbar.html.erb (Duration: 26.2ms | Allocations: 430)
+  Rendered layout layouts/application.html.erb (Duration: 891.7ms | Allocations: 23445)
+Completed 200 OK in 1160ms (Views: 914.5ms | ActiveRecord: 33.8ms | Allocations: 29735)
+
+
+Started GET "/" for 192.168.56.1 at 2023-12-09 20:42:12 +0000
+Cannot render console from 192.168.56.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mProject Load (2.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/dashboard/index.html.erb:11
+  [1m[36mTask Count (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."completion" = ?[0m  [["project_id", 1], ["completion", 1]]
+  ↳ app/views/dashboard/index.html.erb:15
+  [1m[36mTask Count (23.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 1]]
+  ↳ app/views/dashboard/index.html.erb:15
+  [1m[36mTask Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ? AND (due_date < '2023-12-09') AND "tasks"."completion" = ?[0m  [["project_id", 1], ["completion", 0]]
+  ↳ app/views/dashboard/index.html.erb:16
+  [1m[36mTask Count (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."completion" = ?[0m  [["project_id", 2], ["completion", 1]]
+  ↳ app/views/dashboard/index.html.erb:15
+  [1m[36mTask Count (5.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/views/dashboard/index.html.erb:15
+  [1m[36mTask Count (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ? AND (due_date < '2023-12-09') AND "tasks"."completion" = ?[0m  [["project_id", 2], ["completion", 0]]
+  ↳ app/views/dashboard/index.html.erb:16
+  [1m[36mTask Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."completion" = ?[0m  [["project_id", 3], ["completion", 1]]
+  ↳ app/views/dashboard/index.html.erb:15
+  [1m[36mTask Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 3]]
+  ↳ app/views/dashboard/index.html.erb:15
+  [1m[36mTask Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ? AND (due_date < '2023-12-09') AND "tasks"."completion" = ?[0m  [["project_id", 3], ["completion", 0]]
+  ↳ app/views/dashboard/index.html.erb:16
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 621.3ms | Allocations: 9526)
+  Rendered shared/_navbar.html.erb (Duration: 13.9ms | Allocations: 262)
+  Rendered layout layouts/application.html.erb (Duration: 818.7ms | Allocations: 22777)
+Completed 200 OK in 946ms (Views: 799.4ms | ActiveRecord: 43.5ms | Allocations: 28654)
+
+
+Started GET "/projects" for 192.168.56.1 at 2023-12-09 20:42:28 +0000
+Cannot render console from 192.168.56.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:6
+  Rendered projects/_project.html.erb (Duration: 23.0ms | Allocations: 182)
+  Rendered projects/_project.html.erb (Duration: 0.6ms | Allocations: 16)
+  Rendered projects/_project.html.erb (Duration: 5.5ms | Allocations: 16)
+  Rendered projects/index.html.erb within layouts/application (Duration: 122.8ms | Allocations: 1554)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 153.4ms | Allocations: 4064)
+Completed 200 OK in 244ms (Views: 177.7ms | ActiveRecord: 3.5ms | Allocations: 6222)
+
+
+Started GET "/projects/1" for 192.168.56.1 at 2023-12-09 20:42:31 +0000
+Cannot render console from 192.168.56.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:63:in `set_project'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/_project.html.erb (Duration: 1.7ms | Allocations: 17)
+  Rendered projects/show.html.erb within layouts/application (Duration: 46.2ms | Allocations: 588)
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 243)
+  Rendered layout layouts/application.html.erb (Duration: 136.0ms | Allocations: 2987)
+Completed 200 OK in 221ms (Views: 140.4ms | ActiveRecord: 1.5ms | Allocations: 5748)
+
+
+Started GET "/projects" for 192.168.56.1 at 2023-12-09 20:42:40 +0000
+Cannot render console from 192.168.56.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (5.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:6
+  Rendered projects/_project.html.erb (Duration: 8.8ms | Allocations: 17)
+  Rendered projects/_project.html.erb (Duration: 6.3ms | Allocations: 16)
+  Rendered projects/_project.html.erb (Duration: 0.6ms | Allocations: 16)
+  Rendered projects/index.html.erb within layouts/application (Duration: 170.0ms | Allocations: 990)
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 243)
+  Rendered layout layouts/application.html.erb (Duration: 335.4ms | Allocations: 3424)
+Completed 200 OK in 388ms (Views: 346.8ms | ActiveRecord: 5.4ms | Allocations: 5059)
+
+
+Started GET "/projects1/tasks" for 192.168.56.1 at 2023-12-09 20:42:52 +0000
+Cannot render console from 192.168.56.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/projects1/tasks"):
+  
+Started GET "/projects/1/tasks" for 192.168.56.1 at 2023-12-09 20:43:00 +0000
+Cannot render console from 192.168.56.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TasksController#index as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (5.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:67:in `set_project'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 1]]
+  ↳ app/views/tasks/index.html.erb:14
+  Rendered tasks/index.html.erb within layouts/application (Duration: 123.1ms | Allocations: 6095)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 259)
+  Rendered layout layouts/application.html.erb (Duration: 161.6ms | Allocations: 8636)
+Completed 200 OK in 341ms (Views: 236.8ms | ActiveRecord: 6.7ms | Allocations: 11295)
+
+
+Started GET "/projects/1/tasks/1" for 192.168.56.1 at 2023-12-09 20:43:12 +0000
+Cannot render console from 192.168.56.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TasksController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:67:in `set_project'
+  [1m[36mTask Load (1.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["project_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:64:in `set_task'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 24.7ms | Allocations: 330)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 244)
+  Rendered layout layouts/application.html.erb (Duration: 122.4ms | Allocations: 2730)
+Completed 200 OK in 481ms (Views: 238.2ms | ActiveRecord: 6.1ms | Allocations: 5732)
+
+
+Started GET "/projects/1/tasks" for 192.168.56.1 at 2023-12-09 20:43:18 +0000
+Cannot render console from 192.168.56.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TasksController#index as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (2.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:67:in `set_project'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (23.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 1]]
+  ↳ app/views/tasks/index.html.erb:14
+  Rendered tasks/index.html.erb within layouts/application (Duration: 195.2ms | Allocations: 2689)
+  Rendered shared/_navbar.html.erb (Duration: 6.2ms | Allocations: 244)
+  Rendered layout layouts/application.html.erb (Duration: 312.9ms | Allocations: 5089)
+Completed 200 OK in 529ms (Views: 295.6ms | ActiveRecord: 27.0ms | Allocations: 7187)
+
+
+Started GET "/projects/1/tasks/1" for 192.168.56.1 at 2023-12-09 20:43:20 +0000
+Cannot render console from 192.168.56.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TasksController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (4.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:67:in `set_project'
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["project_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:64:in `set_task'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 117)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 244)
+  Rendered layout layouts/application.html.erb (Duration: 52.5ms | Allocations: 2517)
+Completed 200 OK in 243ms (Views: 65.1ms | ActiveRecord: 12.8ms | Allocations: 5373)
+
+
+Started GET "/projects/1/tasks" for 192.168.56.1 at 2023-12-09 20:43:24 +0000
+Cannot render console from 192.168.56.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TasksController#index as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:67:in `set_project'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 1]]
+  ↳ app/views/tasks/index.html.erb:14
+  Rendered tasks/index.html.erb within layouts/application (Duration: 127.3ms | Allocations: 2689)
+  Rendered shared/_navbar.html.erb (Duration: 22.0ms | Allocations: 244)
+  Rendered layout layouts/application.html.erb (Duration: 227.3ms | Allocations: 5089)
+Completed 200 OK in 332ms (Views: 278.7ms | ActiveRecord: 1.6ms | Allocations: 7182)
+
+
+Started GET "/projects/1/tasks/1" for 192.168.56.1 at 2023-12-09 20:43:28 +0000
+Cannot render console from 192.168.56.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TasksController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (19.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:67:in `set_project'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["project_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:64:in `set_task'
+  Rendering layout layouts/application.html.erb
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 117)
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | Allocations: 244)
+  Rendered layout layouts/application.html.erb (Duration: 46.3ms | Allocations: 2551)
+Completed 200 OK in 174ms (Views: 59.4ms | ActiveRecord: 19.9ms | Allocations: 5408)
+
+
