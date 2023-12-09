@@ -46,7 +46,7 @@ class TasksController < ApplicationController
   private
 
   def set_project
-    @project = current_user.projects.find(params[:project_id])
+    @project = Project.find(params[:project_id])
   rescue ActiveRecord::RecordNotFound
     redirect_to projects_path, alert: 'Project not found.'
   end

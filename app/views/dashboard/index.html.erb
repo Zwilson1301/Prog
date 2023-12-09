@@ -12,8 +12,8 @@
     
         <tr>
           <td><%= link_to p.name, project_path(p) %></td>
-          <td><%= (p.tasks.where({:complete => true}).count.to_f / p.tasks.count) * 100 %>%</td>
-          <td><%= p.tasks.where("due_date < ?", Date.today).where({:complete => false}).count %></td>
+          <td><%= (p.tasks.where({:completion => true}).count.to_f / p.tasks.count) * 100 %>%</td>
+          <td><%= p.tasks.where("due_date < ?", Date.today).where({:completion => false}).count %></td>
         </tr>
       <% end %>
     </tbody>
