@@ -40707,3 +40707,103 @@ Processing by TasksController#show as HTML
 Completed 200 OK in 323ms (Views: 159.0ms | ActiveRecord: 17.3ms | Allocations: 7126)
 
 
+Started GET "/projects" for 192.168.56.1 at 2023-12-09 21:29:47 +0000
+Cannot render console from 192.168.56.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/_project.html.erb (Duration: 7.3ms | Allocations: 177)
+  Rendered projects/_project.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered projects/_project.html.erb (Duration: 0.4ms | Allocations: 16)
+  Rendered projects/index.html.erb within layouts/application (Duration: 74.9ms | Allocations: 1517)
+  Rendered shared/_navbar.html.erb (Duration: 10.9ms | Allocations: 255)
+  Rendered layout layouts/application.html.erb (Duration: 210.5ms | Allocations: 4018)
+Completed 200 OK in 269ms (Views: 233.5ms | ActiveRecord: 1.2ms | Allocations: 6003)
+
+
+Started GET "/" for 192.168.56.1 at 2023-12-09 21:56:21 +0000
+Cannot render console from 192.168.56.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (20.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/dashboard/index.html.erb:11
+  [1m[36mTask Count (5.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."completion" = ?[0m  [["project_id", 1], ["completion", 1]]
+  ↳ app/views/dashboard/index.html.erb:15
+  [1m[36mTask Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 1]]
+  ↳ app/views/dashboard/index.html.erb:15
+  [1m[36mTask Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ? AND (due_date < '2023-12-09') AND "tasks"."completion" = ?[0m  [["project_id", 1], ["completion", 0]]
+  ↳ app/views/dashboard/index.html.erb:16
+  [1m[36mTask Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."completion" = ?[0m  [["project_id", 2], ["completion", 1]]
+  ↳ app/views/dashboard/index.html.erb:15
+  [1m[36mTask Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 2]]
+  ↳ app/views/dashboard/index.html.erb:15
+  [1m[36mTask Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ? AND (due_date < '2023-12-09') AND "tasks"."completion" = ?[0m  [["project_id", 2], ["completion", 0]]
+  ↳ app/views/dashboard/index.html.erb:16
+  [1m[36mTask Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."completion" = ?[0m  [["project_id", 3], ["completion", 1]]
+  ↳ app/views/dashboard/index.html.erb:15
+  [1m[36mTask Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ?[0m  [["project_id", 3]]
+  ↳ app/views/dashboard/index.html.erb:15
+  [1m[36mTask Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."project_id" = ? AND (due_date < '2023-12-09') AND "tasks"."completion" = ?[0m  [["project_id", 3], ["completion", 0]]
+  ↳ app/views/dashboard/index.html.erb:16
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 542.7ms | Allocations: 13557)
+  Rendered shared/_navbar.html.erb (Duration: 3.5ms | Allocations: 466)
+  Rendered layout layouts/application.html.erb (Duration: 1091.8ms | Allocations: 46454)
+Completed 200 OK in 1459ms (Views: 1108.2ms | ActiveRecord: 28.8ms | Allocations: 61413)
+
+
+Started GET "/projects/1" for 192.168.56.1 at 2023-12-09 21:56:27 +0000
+Cannot render console from 192.168.56.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:63:in `set_project'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/_project.html.erb (Duration: 20.1ms | Allocations: 196)
+  Rendered projects/show.html.erb within layouts/application (Duration: 86.9ms | Allocations: 1213)
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 249)
+  Rendered layout layouts/application.html.erb (Duration: 124.4ms | Allocations: 3694)
+Completed 200 OK in 242ms (Views: 165.9ms | ActiveRecord: 9.1ms | Allocations: 7016)
+
+
+Started GET "/projects" for 192.168.56.1 at 2023-12-09 21:56:56 +0000
+Cannot render console from 192.168.56.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/_project.html.erb (Duration: 0.4ms | Allocations: 17)
+  Rendered projects/_project.html.erb (Duration: 0.7ms | Allocations: 16)
+  Rendered projects/_project.html.erb (Duration: 0.2ms | Allocations: 16)
+  Rendered projects/index.html.erb within layouts/application (Duration: 80.3ms | Allocations: 1221)
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 243)
+  Rendered layout layouts/application.html.erb (Duration: 131.0ms | Allocations: 3629)
+Completed 200 OK in 181ms (Views: 163.2ms | ActiveRecord: 0.4ms | Allocations: 5333)
+
+
+Started GET "/projects" for 192.168.56.1 at 2023-12-09 21:58:46 +0000
+Cannot render console from 192.168.56.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:10
+  Rendered projects/_project.html.erb (Duration: 26.1ms | Allocations: 177)
+  Rendered projects/_project.html.erb (Duration: 1.4ms | Allocations: 16)
+  Rendered projects/_project.html.erb (Duration: 0.5ms | Allocations: 16)
+  Rendered projects/index.html.erb within layouts/application (Duration: 146.9ms | Allocations: 1496)
+  Rendered shared/_navbar.html.erb (Duration: 18.0ms | Allocations: 423)
+  Rendered layout layouts/application.html.erb (Duration: 344.5ms | Allocations: 4434)
+Completed 200 OK in 442ms (Views: 384.3ms | ActiveRecord: 1.8ms | Allocations: 6694)
+
+
