@@ -26,7 +26,7 @@ Project.all.each do |project|
         :name => "Task #{index}",
         :due_date => Date.today + 5 - rand(10),
         :complete => [true, false].sample,
-        :project_id => project.project_id
+        :project_id => project.id
       }
     )
   end
